@@ -1,0 +1,27 @@
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item center full">
+        <h1 class="topcoat-navigation-bar__title"></h1>
+    </div>
+</div>
+<div class="options">
+    <div class="topcoat-navigation-bar">
+            <div>File type </div>
+            <select id="fileType" style="width: 100%">
+                <option value="">All</option>
+                <option value="audio">Music</option>
+                <option value="video">Video</option>
+                <option value="image">Images</option>
+            </select>
+    </div>
+    <div class="topcoat-navigation-bar" style="heigth: 200px;">
+        <div style="width: 49%; float:left;">
+            <div>Min Size</div>
+            <input type="number" id="minSize" class="topcoat-text-input" value="0">
+        </div>
+        <div style="width: 49%; float:left;">
+            <div>Max Size</div>
+            <input type="number" id="maxSize" class="topcoat-text-input" value="0">
+        </div>
+    </div>
+</div>
+<div class="topcoat-list__container scroller" style="top:200px;"></div>

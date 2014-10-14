@@ -1,0 +1,14 @@
+<ul class="topcoat-list list">
+    <% fsObjectCollection.each(function(fsObjectItem) {
+        var fsObjectType = fsObjectItem.get('isFile') ? 'file' : 'folder';
+        a = fsObjectItem.cid;
+        %>
+        <li class="topcoat-list__item <%= fsObjectType %>" data-path="<%= fsObjectItem.get('fullPath') %>" data-fuck="<%= a %>">
+            <p><%= fsObjectItem.get('name') %> </p>
+            <% if(fsObjectType === 'folder') { %>
+                <span class="chevron"></span>
+            <% } %>
+            <span class="count"></span>
+        </li>
+    <% }); %>
+</ul>
