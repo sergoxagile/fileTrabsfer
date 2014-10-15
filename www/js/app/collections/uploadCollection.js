@@ -36,9 +36,11 @@ define(function (require) {
                 this.trigger('readyToUpload');
             },
             upload: function() {
-                _.each(this.filter({uploaded: true}), _.bind(this.send, this));
+                console.log(11111);
+                _.each(this.where({uploaded: true}), _.bind(this.send, this));
             },
             send: function(model) {
+                console.log(222);
                 var url = _.bind(model.attributes.toURL, model.attributes)();
                 var options = new FileUploadOptions();
                 options.fileKey  = "file";
